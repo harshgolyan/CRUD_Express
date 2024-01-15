@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Show All Employee</h1>
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email Id</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list}}
+    <tr class="table-active">
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.phone}}</td>
+      <td><a href="/deleteUser/{{this.id}}" class="btn btn-danger btn-block">Delete</a></td>
+      <td><a href="/editUser/{{this.id}}" class="btn btn-warning btn-block">Update</a></td>
+    </tr>
+    
+    {{/each}}
+  </tbody>
+</table>
+</div>

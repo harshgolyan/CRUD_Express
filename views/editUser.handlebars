@@ -1,0 +1,32 @@
+<div class="container">
+    {{#each list}}
+<form method="post" action="http://localhost:3000/updateUser/{{this.id}}">
+ <h1>Edit user</h1>
+<br>
+<div class="form-group">
+  <label class="col-form-label col-form-label-lg mt-4" for="inputLarge">id</label>
+  <input class="form-control form-control-lg" type="text" placeholder="enter the name" readonly="" value="{{this.id}}" name="id" id="inputLarge">
+</div>
+<br>
+<div class="form-group">
+  <label class="col-form-label col-form-label-lg mt-4" for="inputLarge">enter the name</label>
+  <input class="form-control form-control-lg" type="text" placeholder="enter the name" value="{{this.name}}" name="name" id="inputLarge">
+</div>
+<br>
+<div class="form-group">
+  <label class="col-form-label col-form-label-lg mt-4" for="inputLarge">email</label>
+  <input class="form-control form-control-lg" type="text" placeholder="enter email id" value="{{this.email}}" name="email" id="inputLarge">
+</div>
+<br>
+<div class="form-group">
+  <label class="col-form-label col-form-label-lg mt-4" for="inputLarge">phone number</label>
+  <input class="form-control form-control-lg" type="text" placeholder="enter phone number" value="{{this.phone}}" name="phone" id="inputLarge">
+</div>
+<br>
+<div class="input-group mb-3">
+      <button class="btn btn-success" type="submit" id="button-addon2">Submit</button>
+</div>
+
+</form>
+{{/each}}
+</div>
